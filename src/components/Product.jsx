@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext";
+import peproni from "../images/peproni.png";
 
 function Product(props) {
   const [isAdding, setIsAdding] = useState(false);
@@ -33,11 +34,7 @@ function Product(props) {
   return (
     <Link to={`/products/${$oid}`}>
       <div className="shadow-lg rounded-md">
-        <img
-          className="w-full rounded-t-md"
-          src="../images/peproni.png"
-          alt=""
-        />
+        <img className="w-full rounded-t-md" src={peproni} alt="" />
         <div className="py-4 px-2 sm:text-xl md:text-2xl">
           <h2 className=" font-bold pb-2 md:pb-4">{product.name}</h2>
           <span className="bg-gray-200 py-1 rounded-sm text-sm px-2 inline-block sm:text-lg md:text-xl ">
