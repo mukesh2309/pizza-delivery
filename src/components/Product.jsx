@@ -11,6 +11,7 @@ function Product(props) {
   const { product } = props;
   const { $oid } = product._id;
   const addToCart = (e, p) => {
+    console.log(e);
     e.preventDefault();
     let _cart = { ...cart };
     if (!_cart.items) {

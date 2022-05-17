@@ -26,7 +26,9 @@ function Cart() {
         setPriceFetch(true);
       });
   }, [cart]);
-  const product_id = Object.keys(cart.items);
+  let product_id;
+  cart.items ? (product_id = Object.keys(cart.items)) : (product_id = 1);
+  console.log(product_id);
   const getQty = (prodId) => {
     return cart.items[prodId];
   };
