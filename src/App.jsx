@@ -20,7 +20,10 @@ const App = () => {
     window.localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
   return (
-    <div className="md:px-8 sm:px-6 px-4">
+    <div
+      className="md:px-8 sm:px-6 px-4"
+      style={{ "-webkit-tap-highlight-color": "transparent" }}
+    >
       <Router>
         <CartContext.Provider value={{ cart, setCart }}>
           <Nav />
