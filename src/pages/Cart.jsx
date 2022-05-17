@@ -66,29 +66,30 @@ function Cart() {
     setCart({});
   };
   return !product_id.length ? (
-    <img className="mx-auto w-1/2" src={emptyCart} />
+    <img className="mx-auto mt-12 md:w-1/2" src={emptyCart} />
   ) : (
-    <div className="container mx-auto px-24">
-      <h1 className="my-12 font-bold">
+    <div className="container mx-auto md:px-18 px-4">
+      <div className="my-12 font-bold">
         <ul>
           {products.map((e) => {
             // console.log(e);
             if (product_id.includes(e._id.$oid)) {
               return (
                 <li
-                  className="flex  items-center justify-between mb-4"
+                  className="md:flex md:flex-row flex flex-col
+                  justify-center items-end gap-4 md:items-center md:justify-between mb-4"
                   key={e._id.$oid}
                 >
-                  <div className="flex items-center flex-1">
+                  <div className="flex justify-between md:justify-start items-center w-full flex-1">
                     <img className="w-24" src={peproni} alt="" />
-                    <span className="text-xl font-bold ml-4 w-45">
+                    <span className="text-md font-bold ml-4 w-45">
                       {e.name}
                     </span>
                   </div>
                   <div className="flex items-center flex-1">
                     <button
                       onClick={() => decrement(e._id.$oid)}
-                      className="text-2xl font-bold bg-yellow-500 px-6 py-1 rounded-full leading-none"
+                      className="text-lg font-bold bg-yellow-500 px-4 py-1 rounded-full leading-none"
                     >
                       -
                     </button>
@@ -97,7 +98,7 @@ function Cart() {
                       onClick={() => {
                         increment(e._id.$oid);
                       }}
-                      className="text-2xl font-bold bg-yellow-500 px-6 py-1 rounded-full leading-none"
+                      className="text-lg font-bold bg-yellow-500 px-4 py-1 rounded-full leading-none"
                     >
                       +
                     </button>
@@ -107,10 +108,11 @@ function Cart() {
                   </span>
                   <button
                     onClick={() => deleteHandle(e._id.$oid)}
-                    className="bg-red-500 px-8 text-lg font-bold rounded-lg py-3 text-white"
+                    className="bg-red-500 px-4 text-sm font-bold rounded-lg py-2 text-white"
                   >
                     Delete
                   </button>
+                  <hr className="my-6" />
                 </li>
               );
             }
@@ -125,7 +127,7 @@ function Cart() {
             </div>
           </div>
         </ul>
-      </h1>
+      </div>
     </div>
   );
 }

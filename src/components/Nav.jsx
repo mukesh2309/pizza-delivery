@@ -21,12 +21,14 @@ const Nav = () => {
           <img className="md:h-20 h-15" src={logo} alt="logo" />
         </Link>
         <ul className="flex items-center gap-4 md:gap-8">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/products">Products</Link>
-          </li>
+          <div className="gap-4 hidden sm:flex">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/products">Products</Link>
+            </li>
+          </div>
           <li>
             <Link to="/cart">
               <div style={cartStyle}>
@@ -37,6 +39,10 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
+      <div className="nav px-2 sm:hidden font-bold text-md flex justify-center gap-6">
+        <Link to="/">Home</Link>
+        <Link to="/products">Products</Link>
+      </div>
     </>
   );
 };
