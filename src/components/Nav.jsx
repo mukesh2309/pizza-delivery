@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../CartContext";
+import logo from "../images/logo.png";
+import cartImg from "../images/cart.png";
 
 const Nav = () => {
   const cartStyle = {
@@ -16,7 +18,7 @@ const Nav = () => {
     <>
       <nav className="container mx-auto flex justify-between items-center py-4 px-2 font-semibold sm:text-xl md:text-2xl ">
         <Link to="/">
-          <img className="md:h-20 h-15" src="../images/logo.png" alt="logo" />
+          <img className="md:h-20 h-15" src={logo} alt="logo" />
         </Link>
         <ul className="flex items-center gap-4 md:gap-8">
           <li>
@@ -29,7 +31,7 @@ const Nav = () => {
             <Link to="/cart">
               <div style={cartStyle}>
                 <span>{cart.totalItems}</span>
-                <img src="/images/cart.png" alt="cart" />
+                <img src={cartImg} alt="cart" />
               </div>
             </Link>
           </li>

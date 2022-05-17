@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import peproni from "../images/peproni.png";
 
 function SingleProduct() {
   const [product, setProduct] = useState({});
@@ -31,7 +32,7 @@ function SingleProduct() {
         Back
       </button>
       <div className="flex flex-col sm:flex-row  gap-12">
-        <img src=".../images/peproni.png" alt="" />
+        <img src={peproni} alt="" />
         <div>
           <h1 className="text-xl font-bold">{product.name}</h1>
           <div className="text-lg">{product.size}</div>

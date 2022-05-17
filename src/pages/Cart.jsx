@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { CartContext } from "../CartContext";
+import emptyCart from "../images/empty-cart.png";
+import peproni from "../images/peproni.png";
 
 function Cart() {
   let total = 0;
@@ -64,7 +66,7 @@ function Cart() {
     setCart({});
   };
   return !product_id.length ? (
-    <img className="mx-auto w-1/2" src="/images/empty-cart.png" />
+    <img className="mx-auto w-1/2" src={emptyCart} />
   ) : (
     <div className="container mx-auto px-24">
       <h1 className="my-12 font-bold">
@@ -78,7 +80,7 @@ function Cart() {
                   key={e._id.$oid}
                 >
                   <div className="flex items-center flex-1">
-                    <img className="w-24" src=".../images/peproni.png" alt="" />
+                    <img className="w-24" src={peproni} alt="" />
                     <span className="text-xl font-bold ml-4 w-45">
                       {e.name}
                     </span>
