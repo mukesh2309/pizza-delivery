@@ -78,7 +78,7 @@ function Cart() {
                   key={e._id.$oid}
                 >
                   <div className="flex items-center flex-1">
-                    <img className="w-24" src="./images/peproni.png" alt="" />
+                    <img className="w-24" src="../images/peproni.png" alt="" />
                     <span className="text-xl font-bold ml-4 w-45">
                       {e.name}
                     </span>

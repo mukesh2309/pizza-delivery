@@ -31,7 +31,7 @@ function SingleProduct() {
         Back
       </button>
       <div className="flex flex-col sm:flex-row  gap-12">
-        <img src="./images/peproni.png" alt="" />
+        <img src="../images/peproni.png" alt="" />
         <div>
           <h1 className="text-xl font-bold">{product.name}</h1>
           <div className="text-lg">{product.size}</div>

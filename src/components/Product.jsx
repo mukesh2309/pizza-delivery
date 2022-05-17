@@ -35,7 +35,7 @@ function Product(props) {
       <div className="shadow-lg rounded-md">
         <img
           className="w-full rounded-t-md"
-          src="./images/peproni.png"
+          src="../images/peproni.png"
           alt=""
         />
         <div className="py-4 px-2 sm:text-xl md:text-2xl">

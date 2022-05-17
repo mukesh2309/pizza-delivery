@@ -6,7 +6,7 @@ const Home = (props) => {
       <div className="pb-12 pt-4 md:pt-12">
         <div className="container mx-auto px-2 md:px-4 flex flex-col sm:flex-row-reverse items-center gap-12">
           <div className="md:w-full">
-            <img className="md:ml-auto" src="./images/pizza.png" alt="pizza" />
+            <img className="md:ml-auto" src="../images/pizza.png" alt="pizza" />
           </div>
           <div className="w-full home-text">
             <h5 className="text-md md:text-2xl mb-2 lg:text-4xl">
